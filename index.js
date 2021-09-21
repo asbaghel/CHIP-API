@@ -21,7 +21,9 @@ app.use(bodyParser.json({ limit: "15mb" }));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post("/api/master", (req, res) => {
-  let query = req.body.query;
+  // let query = req.body.query;
+  let query = req.body;
+  console.log(req.body);
   console.log({ query });
 
   client
